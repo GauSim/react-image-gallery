@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "module": "system",
+        "target": "es5",
+        "noImplicitAny": false,
+        "outDir": "built",
+        "rootDir": ".",
+        "jsx": "react",
+        "sourceMap": false
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}

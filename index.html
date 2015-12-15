@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>hi</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
+  crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-3dkvEK0WLHRJ7/Csr0BZjAWxERc5WH7bdeUya2aXxdU= sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg=="
+  crossorigin="anonymous">
+  <script src="jspm_packages/system.js"></script>
+  <script src="config.js"></script>
+  <script>
+    System.import("app/main");
+  </script>
+  <style>
+    @-webkit-keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    
+    @-moz-keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    
+    body {
+      font-family: 'Open Sans', sans-serif;
+    }
+    
+    .padding {
+      padding-top: 10px;
+    }
+    
+    .pointer {
+      cursor: pointer;
+    }
+    
+    .fadeIn {
+      opacity: 0;
+      /* make things invisible upon start */
+      -webkit-animation: fadeIn ease-in 1;
+      /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+      -moz-animation: fadeIn ease-in 1;
+      animation: fadeIn ease-in 1;
+      -webkit-animation-fill-mode: forwards;
+      /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+      -moz-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+      -webkit-animation-duration: 1s;
+      -moz-animation-duration: 1s;
+      animation-duration: 1s;
+    }
+    
+    .ProjectList {
+      width: 100%;
+    }
+    
+    .ProjectList .main-spinner {
+      margin-top: 15%;
+      color: rgba(238, 238, 238, 0.5);
+    }
+    
+    .ProjectList .ProjectListItem {
+      border: 1px solid rgba(238, 238, 238, 0.5);
+      height: 160px;
+      margin-top: 15px;
+      overflow: hidden;
+    }
+    
+    .ProjectList .ProjectListItem:hover .name {
+      transition: all 0.9s ease;
+      opacity: 1;
+    }
+    
+    .ProjectList .ProjectListItem:hover .img-funky {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+    
+    .ProjectList .ProjectListItem .name {
+      opacity: 0;
+      background-color: rgba(217, 217, 217, 0.7);
+      margin-left: 91px;
+      text-align: center;
+      padding: 10px;
+      width: 79px;
+      color: rgba(0, 0, 0, 0.52);
+      display: block;
+      max-width: 100%;
+      position: absolute;
+      top: 67px;
+      border-radius: 5px;
+      font-size: 14pt;
+      line-height: 24px;
+    }
+    
+    .img-funky {
+      cursor: pointer;
+      transition: all 0.4s ease;
+    }
+  </style>
+</head>
+
+<body class="container">
+  <div id="main-render">loading .. working typescript</div>
+</body>
+
+</html>

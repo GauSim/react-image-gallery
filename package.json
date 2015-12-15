@@ -1,0 +1,32 @@
+{
+  "name": "react-image-gallery",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server --open=.",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "jspm": {
+    "dependencies": {
+      "bootstrap": "github:twbs/bootstrap@^3.3.6",
+      "es6-promise": "npm:es6-promise@^3.0.2",
+      "q": "npm:q@^1.4.1"
+    },
+    "devDependencies": {
+      "react": "npm:react@^0.14.3",
+      "react-dom": "npm:react-dom@^0.14.3",
+      "ts": "github:frankwallis/plugin-typescript@^2.3.2",
+      "typescript": "npm:typescript@^1.6.2",
+      "underscore": "npm:underscore@^1.8.3"
+    }
+  },
+  "devDependencies": {
+    "jspm": "^0.16.15"
+  },
+  "dependencies": {
+    "live-server": "^0.9.0"
+  }
+}
