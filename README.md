@@ -13,5 +13,6 @@ get it running:
 ```
 $ npm instsall
 $ jspm install 
+$ tsd install
 $ npm start
 ```
