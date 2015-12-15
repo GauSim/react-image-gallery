@@ -5,6 +5,6 @@ export class FilterButton extends React.Component<{ name: string; filterKey: str
 		this.props.setfilter(this.props.filterKey);
 	}
 	render() {
-		return <li className={ this.props.isCurrent ? 'active' : 'pointer'} role="presentation"> <a onClick={ this.onClick }> { this.props.name }  </a></li>
+		return <button type="button" onClick={ this.onClick } className={ this.props.isCurrent ? 'btn btn-primary' : 'btn btn-default'} role="presentation"> <span > { this.props.name }  </span></button>
 	}
 }

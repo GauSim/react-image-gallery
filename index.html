@@ -9,10 +9,11 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-3dkvEK0WLHRJ7/Csr0BZjAWxERc5WH7bdeUya2aXxdU= sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg=="
   crossorigin="anonymous">
+  <link href="https://bootswatch.com/cosmo/bootstrap.min.css" rel='stylesheet'>
   <script src="jspm_packages/system.js"></script>
   <script src="config.js"></script>
   <script>
-    System.import("app/main");
+    System.import("app/Main");
   </script>
   <style>
     @-webkit-keyframes fadeIn {
@@ -76,12 +77,12 @@
     
     .ProjectList .main-spinner {
       margin-top: 15%;
-      color: rgba(238, 238, 238, 0.5);
+      color: rgba(0, 0, 0, 0.5);
     }
     
     .ProjectList .ProjectListItem {
-      border: 1px solid rgba(238, 238, 238, 0.5);
-      height: 160px;
+      border: 1px solid rgba(0, 0, 0, 0.5);
+      height: 180px;
       margin-top: 15px;
       overflow: hidden;
     }
@@ -91,9 +92,14 @@
       opacity: 1;
     }
     
+    .img-funky {
+      height: 100%;
+      margin: 0 auto;
+    }
+    
     .ProjectList .ProjectListItem:hover .img-funky {
       opacity: 1;
-      transform: scale(1.2);
+      transform: scale(1.4);
     }
     
     .ProjectList .ProjectListItem .name {

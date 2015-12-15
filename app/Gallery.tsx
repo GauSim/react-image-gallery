@@ -29,27 +29,6 @@ export class Gallery extends React.Component<{ ListOfProject: Project[] }, IStat
   };
   componentDidMount() {
     const state = this.state;
-    
-    
-    
-    /*
-        let loaded = 0;
-        Q.all(this.props.ListOfProject.map(item => {
-          return ImgPreloader
-            .load(item.imgUrl)
-            .then(() => {
-              loaded += 1;
-    
-              if (this.props.ListOfProject.length > 12 && loaded == 12 || loaded == this.props.ListOfProject.length) {
-                _render();
-              }
-              console.log(`done loading image ${loaded} / ${this.props.ListOfProject.length}`);
-            });
-        }))
-          .then(ok => {
-            console.log('All Done');
-          })
-          */
     state.isLoading = false;
     state.List = this.props.ListOfProject.filter((i, index) => {
       return index < this.state.take
@@ -113,12 +92,13 @@ export class Gallery extends React.Component<{ ListOfProject: Project[] }, IStat
   render() {
     return <div className="ProjectList">
               <div>
-                <ul className="nav nav-pills">
+                <div className="btn-group" role="group">
+                  <FilterButton key={null} name="alle" filterKey={ null } setfilter={ this.setfilter } isCurrent={ this.state.currentFilter === null } />
+
                   { this.state.Categories.map((category, key) => {
                     return <FilterButton key={key} name={category.name} filterKey={category.key} setfilter={ this.setfilter } isCurrent={ this.state.currentFilter === category.key } />
                   }) }
-                   <FilterButton key={null} name="alle" filterKey={ null } setfilter={ this.setfilter } isCurrent={ this.state.currentFilter === null } />
-                  </ul>
+                  </div>
                 </div>
 
               <div className="row">

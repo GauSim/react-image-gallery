@@ -2,7 +2,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import * as _ from 'underscore';
-import { Project, ProjectCategory } from './Models';
+import { Project } from './Models';
 import { Gallery } from './Gallery';
 
 
@@ -14,31 +14,28 @@ import { Gallery } from './Gallery';
 
 
 
-const ListCategory = [
-  { name: 'category 1', key: 'cat1' },
-  { name: 'category 2', key: 'cat2' },
-  { name: 'category 3', key: 'cat3' },
-  { name: 'category 4', key: 'cat4' },
-  { name: 'category 5', key: 'cat5' },
-  { name: 'category 6', key: 'cat6' },
-];
 
 const ListOfImages = [
-  'http://fachadasdecasamodernas.com/wp-content/uploads/2015/10/Hermosa-fachada-de-casa-modernas-1.jpg',
-  'https://www.schwoererhaus.de/storage/images/830x466/3_preistraeger_830_466.jpg/%7Bscreen=medium%7D',
-  'http://www.flow-architektur.de/wp-content/uploads/2011/05/2.jpg',
-  'http://www.zerbes.biz/fotografie_innenarchitektur_7.jpg',
-  'http://www.frankwollinger.de/referenzen/fotograf/innenarchitektur-fotografie_files/innenarchitektur-fotografie.jpg',
-  'http://fotograf-stuemer.de/blog/wp-content/uploads/sps_spStuemer_Innenarchitektur_exemplarisch_01.jpg'
+  { img: 'https://c2.staticflickr.com/8/7494/16198306535_2c10003f20_b.jpg', cat: { name: 'Category 1', key: 'cat1' } },
+  { img: 'https://c1.staticflickr.com/9/8572/16011541288_2815f8c8aa_b.jpg', cat: { name: 'Category 2', key: 'cat2' } },
+  { img: 'https://c1.staticflickr.com/9/8610/16197119631_c4c5db717e_b.jpg', cat: { name: 'Category 3', key: 'cat3' } },
+  { img: 'https://c1.staticflickr.com/9/8585/16197611041_35b63295dc_b.jpg', cat: { name: 'Category 4', key: 'cat4' } },
+  { img: 'https://c2.staticflickr.com/8/7512/16203709715_c633652bba_b.jpg', cat: { name: 'Category 5', key: 'cat5' } },
+  { img: 'https://c2.staticflickr.com/8/7578/16009188387_0756885de1_b.jpg', cat: { name: 'Category 6', key: 'cat6' } },
+  { img: 'https://c2.staticflickr.com/8/7483/16007710030_9c541d5a84_b.jpg', cat: { name: 'Category 7', key: 'cat7' } },
+  { img: 'https://c2.staticflickr.com/8/7464/16193349671_33d2c07ed4_b.jpg', cat: { name: 'Category 8', key: 'cat8' } },
+  { img: 'https://c2.staticflickr.com/8/7542/16007929760_8ee9d7cac4_b.jpg', cat: { name: 'Category 9', key: 'cat9' } }
 ]
+
+
 const ListOfProject = [];
 for (let i = 0; i < 200; i++) {
-  ListOfProject.push(new Project(
-    'Project ' + i,
-    //'http://lorempixel.com/400/200/?' + i,
-    _.sample(ListOfImages, 1)[0] + '?v=' + i,
-    'http://www.web.de',
-    _.sample<ProjectCategory>(ListCategory, 1)[0])
+
+  const randomImage = _.sample<{ img: string, cat: { name: string, key: string } }>(ListOfImages, 1)[0]
+
+  // + '?v=' + i
+  ListOfProject.push(
+    new Project('Project ' + i, randomImage.img, randomImage.img, randomImage.cat)
   )
 }
 
