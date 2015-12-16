@@ -2,18 +2,8 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import * as _ from 'underscore';
-import { Project } from './Models';
 import { Gallery } from './Gallery';
-
-
-
-
-
-
-
-
-
-
+import { Project } from './Models';
 
 const ListOfImages = [
   { img: 'https://c2.staticflickr.com/8/7494/16198306535_2c10003f20_b.jpg', cat: { name: 'Category 1', key: 'cat1' } },

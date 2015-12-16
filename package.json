@@ -13,20 +13,22 @@
     "dependencies": {
       "bootstrap": "github:twbs/bootstrap@^3.3.6",
       "es6-promise": "npm:es6-promise@^3.0.2",
-      "q": "npm:q@^1.4.1"
-    },
-    "devDependencies": {
+      "q": "npm:q@^1.4.1",
       "react": "npm:react@^0.14.3",
       "react-dom": "npm:react-dom@^0.14.3",
       "ts": "github:frankwallis/plugin-typescript@^2.3.2",
       "typescript": "npm:typescript@^1.6.2",
       "underscore": "npm:underscore@^1.8.3"
-    }
+    },
+    "devDependencies": {}
   },
   "devDependencies": {
-    "jspm": "^0.16.15"
-  },
-  "dependencies": {
+    "jspm": "^0.16.15",
+    "grunt": "^0.4.5",
+    "grunt-systemjs-builder": "^0.2.5",
+    "systemjs-builder": "^0.14.11",
+    "time-grunt": "^1.2.2",
     "live-server": "^0.9.0"
-  }
+  },
+  "dependencies": {}
 }
