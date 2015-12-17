@@ -1,14 +1,11 @@
 {
     "compilerOptions": {
-        "module": "system",
-        "target": "es5",
-        "noImplicitAny": false,
-        "outDir": "built",
-        "rootDir": ".",
         "jsx": "react",
-        "sourceMap": false
+        "target": "es5",
+        "module": "system"
     },
-    "exclude": [
-        "node_modules"
+    "files": [
+        "./typings/tsd.d.ts",
+        "./app/Main.tsx"
     ]
 }

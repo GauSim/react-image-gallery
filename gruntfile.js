@@ -19,17 +19,19 @@ module.exports = function (grunt) {
 		var jspm = require('jspm');
 		jspm.setPackagePath('.');
 
-		jspm.bundleSFX('app/Main', 'dist/build.js', {
+		jspm.bundleSFX('app', 'dist/build.js', {
 			minify: true,
 			mangle: true,
 			lowResSourceMaps: true,
 			sourceMaps: false
-		}).then(function () {
+		}).then(function (output) {
 			grunt.log.writeln('done bundling');
+			console.log(output)
 			done();
 		}).catch(function (error) {
 			grunt.log.writeln(error);
 			done(error);
 		});
+		
 	});
 };

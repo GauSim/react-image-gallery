@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as _ from 'underscore';
 
-import { Project, ProjectCategory } from './Models';
+import { Project } from './Models';
 import { FilterButton } from './FilterButton';
 import { ListItem } from './ListItem'
 import loadingSpinner from './LoadingSpinner';
@@ -13,7 +13,7 @@ interface IState {
   take: number;
 
   List: Project[];
-  Categories: ProjectCategory[];
+  Categories: { name: string, key: string }[];
   isLoading: boolean;
 }
 

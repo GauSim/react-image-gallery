@@ -12,12 +12,14 @@
   "jspm": {
     "dependencies": {
       "bootstrap": "github:twbs/bootstrap@^3.3.6",
+      "clean-css": "npm:clean-css@^3.4.3",
+      "css": "github:systemjs/plugin-css@^0.1.17",
       "es6-promise": "npm:es6-promise@^3.0.2",
       "q": "npm:q@^1.4.1",
       "react": "npm:react@^0.14.3",
       "react-dom": "npm:react-dom@^0.14.3",
       "ts": "github:frankwallis/plugin-typescript@^2.3.2",
-      "typescript": "npm:typescript@^1.6.2",
+      "typescript": "npm:typescript@^1.7.5",
       "underscore": "npm:underscore@^1.8.3"
     },
     "devDependencies": {}
@@ -30,5 +32,7 @@
     "time-grunt": "^1.2.2",
     "live-server": "^0.9.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "typescript": "^1.7.5"
+  }
 }
