@@ -1,11 +1,11 @@
 import * as React from 'react';
 import * as Q from 'q';
 
-import { Project } from './Models';
+import { GalleryItem } from './Gallery';
 import loadingSpinner from './LoadingSpinner';
 
 
-export class ListItem extends React.Component<{ imgUrl: string, url: string, Item: Project, key: number }, { isVisible: boolean }> {
+export class ListItem extends React.Component<{ imgUrl: string, url: string, Item: GalleryItem, key: number }, { isVisible: boolean }> {
 
 	state = { isVisible: false }
 	loadImage(imgUrl: string) {

@@ -2,8 +2,9 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import * as _ from 'underscore';
-import { Gallery } from './Gallery';
-import { Project } from './Models';
+
+import { Gallery, GalleryItem } from './Gallery';
+
 
 const ListOfImages = [
   { img: 'https://c2.staticflickr.com/8/7494/16198306535_2c10003f20_b.jpg', cat: { name: 'Category 1', key: 'cat1' } },
@@ -25,12 +26,12 @@ for (let i = 0; i < 200; i++) {
 
   // + '?v=' + i
   ListOfProject.push(
-    new Project('Project ' + i, randomImage.img, randomImage.img, randomImage.cat)
+    new GalleryItem('Project ' + i, randomImage.img, randomImage.img, randomImage.cat)
   )
 }
 
 
 ReactDOM.render(
-  <div> <Gallery ListOfProject={ ListOfProject }/> </div>,
+  <div> <Gallery items={ ListOfProject }/> </div>,
   document.getElementById('main-render')
 );
